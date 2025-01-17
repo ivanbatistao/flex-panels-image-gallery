@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  font-family: 'Montserrat', serif;
+}
+
+.panel {
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  flex: 1 1 0;
+  transition: flex-grow 0.7s ease;
+}
+
+.panel-1 {
+  background-image: url('./images/australia.png');
+}
+
+.panel-2 {
+  background-image: url('./images/canada.png');
+}
+
+.panel-3 {
+  background-image: url('./images/new-zeland.png');
+}
+
+.panel-4 {
+  background-image: url('./images/sweden.png');
+}
+
+.panel-5 {
+  background-image: url('./images/united-kingdom.png');
+}
+
+.panel p {
+  text-transform: uppercase;
+  text-shadow: 0.18rem 0.18rem #000;
+  transition: transform 1s ease-out;
+}
+
+.panel p:first-of-type,
+.panel p:last-of-type {
+  font-size: 2rem;
+}
+
+.panel p:nth-child(2) {
+  font-size: 4rem;
+}
+
+.panel p:first-of-type {
+  transform: translateY(-20rem);
+}
+
+.panel p:last-of-type {
+  transform: translateY(20rem);
+}
+
+.panel.clicked {
+  flex-grow: 2;
+}
+
+.panel p:first-of-type.clicked,
+.panel p:last-of-type.clicked {
+  transform: none;
+}
